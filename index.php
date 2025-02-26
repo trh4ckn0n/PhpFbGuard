@@ -56,6 +56,7 @@ error_reporting(0);
 
         .navbar-brand {
             font-size: 14px;
+            text-align: center;
             font-weight: bold;
             text-shadow: 2px 2px 5px rgba(0,255,0,0.7);
         }
